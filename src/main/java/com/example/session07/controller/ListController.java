@@ -4,6 +4,7 @@ import com.example.session07.model.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -26,4 +27,16 @@ public class ListController {
         model.addAttribute("productList",getProductList());
         return "product_list";
     }
+
+    @GetMapping("/product_list/detail")
+    public String showProductDetails(Model model,@RequestParam("id") Long id) {
+        for(Product product : getProductList()){
+            if(product.getId().equals(id)){
+                model.addAttribute("product",product);
+                break;
+            }
+        }
+        return "product_details";
+    }
+
 }

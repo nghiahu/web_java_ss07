@@ -84,7 +84,9 @@
             <td>${product.price}$</td>
             <td>${product.stock}</td>
             <td>
-                <button>Xem chi tiết</button>
+                <a href="product_list/detail?id=${product.id}">
+                    <button>Xem chi tiết</button>
+                </a>
             </td>
         </tr>
     </c:forEach>
