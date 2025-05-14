@@ -9,6 +9,8 @@
 <a href="home">Bài 1</a> <br>
 <a href="greet?name=Nghĩa">Bài 2</a> <br>
 <a href="error">Bài 3</a> <br>
-<a href="form">Bài 4</a>
+<a href="form">Bài 4</a> <br>
+<a href="home">Bài 5</a>
+<a href="product_list">Bài 6</a>
 </body>
 </html>
